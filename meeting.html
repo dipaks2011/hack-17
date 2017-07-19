@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
     <link rel="stylesheet" href="css/style.css">
     <!--<script src="js/jquery-3.2.1.min.js"></script>-->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -46,7 +46,7 @@
     </div>
 
     <!-- Scheduling Form -->
-    <section class="sechedule-form">
+    <section class="schedule-form">
         <!--
             https://twitter.github.io/typeahead.js/examples/
             http://blog.teamtreehouse.com/creating-autocomplete-dropdowns-datalist-element
@@ -55,9 +55,9 @@
         <div class="s-form">
             One-on-one meeting with
 
-            <input type="text" id="tags">
+            <input type="text" id="tags" class="select-associate">
 
-            On <input type="text" id="datepicker">
+            On <input type="text" id="datepicker" class="date-picker">
             From <input id="basicExample" type="text" class="time" />
 
             :
@@ -70,37 +70,86 @@
 
         <input type="submit" value="Schedule" class="btn-primary">
 
-        <div class="meetings-list ">
-            <br><br><br><br>
-
-            <hr>
-            <h3>Meetings List</h3>
-            <hr>
-
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-
-                </tbody>
-            </table>
-        </div>
-
     </section>
 
+    <div class="meetings-list">
+        <br><br>
+
+        <hr>
+        <h3>Meetings List</h3>
+        <hr>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Associate ID</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Room</th>
+                <th>Status</th>
+                <th>&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">502601</th>
+                <td>Sneha Varne</td>
+                <td>Monday, 16th July</td>
+                <td>11:00am - 11:30am</td>
+                <td>Samiti</td>
+                <td><i class="fa fa-check" aria-hidden="true"></i> Accepted</td>
+                <td><a href="" data-toggle="modal" data-target="#exampleModal" class="feedback-link">Feedback</a> </td>
+            </tr>
+
+            <tr>
+                <th scope="row">502601</th>
+                <td>Sneha Varne</td>
+                <td>Monday, 16th July</td>
+                <td>11:00am - 11:30am</td>
+                <td>Samiti</td>
+                <td><i class="fa fa-info" aria-hidden="true"></i> Scheduled</td>
+                <td>&nbsp;</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
 </div>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3  class="modal-title" id="exampleModalLabel">Feedback for <span>Sneha Varne</span></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="feedback-area">
+                    <textarea name="" id="" rows="5" placeholder="Your feedback here"></textarea>
+                </div>
+                <h3>Performance Metrics</h3>
+                <div class="perf-fields">
+                    <input type="text" class="kpi" placeholder="kpi"> <input type="text" class="kpi-review" placeholder="review">
+                </div>
+                <div class="perf-fields">
+                    <input type="text" class="kpi" placeholder="kpi"> <input type="text" class="kpi-review" placeholder="review">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+//
 
 <script >
     $( function() {
@@ -138,6 +187,11 @@
         //
         $('#basicExample, #basicExample2').timepicker();
 
+
+        //
+        //$('.feedback-link').click(function(){
+            $('#myModal').modal('show');
+        //});
 
     } );
 
