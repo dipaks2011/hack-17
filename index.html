@@ -25,7 +25,7 @@ https://bootstrapcreative.com/resources/bootstrap-3-css-classes-index/
 http://fontawesome.io/icons/
 -->
 
-<div class="container login-form">
+<div class="container login-form hide">
     <div class="logo tb-space">
         <img src="img/Logo.png" height="30" alt="Logo">
     </div>
@@ -55,7 +55,7 @@ http://fontawesome.io/icons/
 
 <!-- Inner page -->
 
-<div class="landing hide">
+<div class="landing">
 <div class="user-profile-bg"></div>
 
 <div class="container sche-meeting">
@@ -171,10 +171,14 @@ http://fontawesome.io/icons/
                     <input type="text" class="kpi" placeholder="kpi"> <input type="text" class="kpi-review" placeholder="review">
                 </div>
 
+                <div class="plus-sign">
+                    <i class="fa fa-plus-circle" aria-hidden="true" title="Add KPI"></i>
+                </div>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
             </div>
         </div>
     </div>
@@ -229,9 +233,9 @@ http://fontawesome.io/icons/
 
 
         //
-        $('.feedback-link').click(function(){
+        //$('.feedback-link').click(function(){
             $('#myModal').modal('show');
-        });
+        //});
 
     } );
 
