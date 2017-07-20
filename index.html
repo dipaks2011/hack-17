@@ -25,9 +25,9 @@ https://bootstrapcreative.com/resources/bootstrap-3-css-classes-index/
 http://fontawesome.io/icons/
 -->
 
-<div class="container login-form hide">
-    <div class="logo tb-space">
-        <img src="img/Logo.png" height="30" alt="Logo">
+<div class="container login-form ">
+    <div class="logo tb-space text-center">
+        <img src="img/CDK-Logo.png" height="30" alt="Logo"> <br><br><br><br>
     </div>
 
     <!--Form-->
@@ -44,6 +44,8 @@ http://fontawesome.io/icons/
                 <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
               </span>
             </div>
+            <div class="login-error">Username or password is incorrect.</div>
+
             <button class="btn btn-primary btn-block login-button" type="button">Login</button>
             <div class="checkbox login-options">
                 <label><input type="checkbox"/> Remember Me</label>
@@ -55,7 +57,8 @@ http://fontawesome.io/icons/
 
 <!-- Inner page -->
 
-<div class="landing">
+<div class="landing hide">
+
 <div class="user-profile-bg"></div>
 
 <div class="container sche-meeting">
@@ -120,6 +123,7 @@ http://fontawesome.io/icons/
                 <th>Room</th>
                 <th>Status</th>
                 <th>&nbsp;</th>
+                <th>&nbsp;</th>
             </tr>
             </thead>
             <tbody>
@@ -131,6 +135,7 @@ http://fontawesome.io/icons/
                 <td>Samiti</td>
                 <td><i class="fa fa-check" aria-hidden="true"></i> Accepted</td>
                 <td><a href="" data-toggle="modal" data-target="#exampleModal" class="feedback-link">Feedback</a> </td>
+                <td><a href="" data-toggle="modal" data-target="#exampleModal" class="history-link">History</a> </td>
             </tr>
 
             <tr>
@@ -140,6 +145,7 @@ http://fontawesome.io/icons/
                 <td>11:00am - 11:30am</td>
                 <td>Samiti</td>
                 <td><i class="fa fa-info" aria-hidden="true"></i> Scheduled</td>
+                <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
 
@@ -173,6 +179,137 @@ http://fontawesome.io/icons/
 
                 <div class="plus-sign">
                     <i class="fa fa-plus-circle" aria-hidden="true" title="Add KPI"></i>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- History Modal -->
+<div class="modal fade bd-example-modal-lg" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3  class="modal-title" id="exampleModalLabel">Feedback history of <span>Sneha Varne</span></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="accordion">
+                    <h3>Jul 17'</h3>
+                    <div>
+                        <p><b>Feedback:</b>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                        <table class="table table-striped">
+                            <tr>
+                                <td scope="row" width="70%">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h3>Jun 17'</h3>
+                    <div>
+                        <p><b>Feedback:</b>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                        <table class="table table-striped">
+                            <tr>
+                                <td scope="row" width="70%">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h3>Apr 17'</h3>
+                    <div>
+                        <p><b>Feedback:</b>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                        <table class="table table-striped">
+                            <tr>
+                                <td scope="row" width="70%">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h3>Mar 17'</h3>
+                    <div>
+                        <p><b>Feedback:</b>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                        <table class="table table-striped">
+                            <tr>
+                                <td scope="row" width="70%">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h3>Feb 17'</h3>
+                    <div>
+                        <p><b>Feedback:</b>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                        <table class="table table-striped">
+                            <tr>
+                                <td scope="row" width="70%">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h3>Jan 17'</h3>
+                    <div>
+                        <p><b>Feedback:</b>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                        <table class="table table-striped">
+                            <tr>
+                                <td scope="row" width="70%">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">KPI</td>
+                                <td>Review</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
 
             </div>
@@ -233,9 +370,21 @@ http://fontawesome.io/icons/
 
 
         //
-        //$('.feedback-link').click(function(){
+        $('.feedback-link').click(function(){
             $('#myModal').modal('show');
-        //});
+        });
+
+        $('.history-link').click(function(){
+            $('#myModal2').modal('show');
+        });
+
+        //Accordion
+        //Accordion
+        $( "#accordion" ).accordion({
+            collapsible: true,
+            active: 0,
+            animate: false
+        });
 
     } );
 
